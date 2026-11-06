@@ -1,4 +1,4 @@
-# Troubleshooting and Lessons Learned
+# Troubleshooting
 
 During this project, I ran into a few issues with user synchronization, DNS, and network connectivity. Here's what happened and how I addressed them.
 
