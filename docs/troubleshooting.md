@@ -20,17 +20,15 @@ After synchronization, the username in Entra ID matched the updated AD username.
 
 ![Updated Entra ID username](../Images/entra-user-upn.png)
 
-This helped me understand that the on-premises AD domain and a user's cloud sign-in domain don't have to be the same.
-
 ## 2. DNS and Network Connectivity
 
-While setting up SYNC01, I ran into intermittent internet connectivity and DNS resolution problems.
+While setting up SYNC01, I ran into internet connectivity and DNS resolution problems.
 
 I checked the network configuration, added external DNS forwarders on DC01, and removed an unused network adapter from RRAS01.
 
 After restarting the affected virtual machines, external connectivity and DNS resolution worked again.
 
-I wasn't able to isolate the exact cause, but the experience showed me how problems with DNS and network configuration can affect services that depend on an internet connection.
+I wasn't able to isolate the exact cause, but my best guess is the unused network adapter's static route was forwarding traffic incorrectly.
 
 ## 3. Delayed User and Group Synchronization
 
@@ -40,4 +38,3 @@ I checked that the correct OUs were selected and reviewed the synchronization st
 
 I then ran an initial synchronization cycle and checked Entra ID again. The missing users and groups eventually appeared.
 
-The main takeaway was that a successful synchronization operation doesn't necessarily mean every expected object is already visible in Entra ID. It's worth checking the selected OUs, synchronization status, and allowing time for changes to appear.
