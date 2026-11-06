@@ -17,7 +17,7 @@ I used Microsoft Entra Connect Sync to synchronize AD users and security groups,
 - Verified a custom domain and updated AD usernames to use it.
 - Selected specific OUs to synchronize instead of the entire domain.
 - Synchronized five AD users and four departmental security groups.
-- Verified that users, group memberships, and passwords synchronized correctly.
+- Verified user and group sync, and confirmed that the same AD password works for both local Windows and Microsoft cloud log-ins.
 
 ### Synchronized Users
 
