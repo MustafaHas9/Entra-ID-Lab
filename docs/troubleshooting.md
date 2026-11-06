@@ -28,7 +28,7 @@ I checked the network configuration, added external DNS forwarders on DC01, and 
 
 After restarting the affected virtual machines, external connectivity and DNS resolution worked again.
 
-I wasn't able to isolate the exact cause, but my best guess is the unused network adapter's static route was forwarding traffic incorrectly.
+I wasn't able to isolate the exact cause, and everything seemed to work after so I didn't investigate further.
 
 ## 3. Delayed User and Group Synchronization
 
